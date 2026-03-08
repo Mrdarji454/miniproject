@@ -1,27 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Players</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .search-page {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .players-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .player-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1E293B;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .player-row:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .player-row img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .player-info {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .player-info h4 {
+            margin: 0;
+        }
+
+        .player-info p {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        .follow-btn {
+            background: #6C63FF;
+            border: none;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .follow-btn:hover {
+            background: #9333EA;
+        }
+    </style>
 </head>
 
 <body>
 
-    <section class="card-container">
+    <!-- Navbar -->
 
-        <div class="card">
-            <img src="images/user.png">
-            <h3>Player1</h3>
-            <p>Game: BGMI</p>
-            <button>Invite</button>
+    <nav class="navbar">
+        <div class="logo">GameSquad</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="teams.html">Teams</a>
+            <a href="create-team.html">Create Team</a>
+            <a href="search.html">Search</a>
+            <a href="profile.html">Profile</a>
         </div>
+    </nav>
 
-        <div class="card">
-            <img src="images/user.png">
-            <h3>Player2</h3>
-            <p>Game: Valorant</p>
-            <button>Invite</button>
+    <!-- Search Section -->
+
+    <section class="search-page">
+
+        <h2>Find Players</h2>
+
+        <input type="text" placeholder="Search gamers..." class="search-bar">
+
+        <!-- Players List -->
+
+        <div class="players-list">
+
+            <div class="player-row">
+
+                <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+                <div class="player-info">
+                    <h4>gamer_boy</h4>
+                    <p>BGMI Player</p>
+                </div>
+
+                <button class="follow-btn">Invite</button>
+
+            </div>
+
+
+            <div class="player-row">
+
+                <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+                <div class="player-info">
+                    <h4>valorant_queen</h4>
+                    <p>Valorant Pro</p>
+                </div>
+
+                <button class="follow-btn">Invite</button>
+
+            </div>
+
+
+            <div class="player-row">
+
+                <img src="https://randomuser.me/api/portraits/men/76.jpg">
+
+                <div class="player-info">
+                    <h4>shadow_sniper</h4>
+                    <p>COD Player</p>
+                </div>
+
+                <button class="follow-btn">Invite</button>
+
+            </div>
+
+
+            <div class="player-row">
+
+                <img src="https://randomuser.me/api/portraits/women/68.jpg">
+
+                <div class="player-info">
+                    <h4>puzzle_master</h4>
+                    <p>Puzzle Games</p>
+                </div>
+
+                <button class="follow-btn">Invite</button>
+
+            </div>
+
         </div>
 
     </section>
